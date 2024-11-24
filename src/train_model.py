@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 # Load preprocessed data
-data = pd.read_csv('data/cleaned_customer_churn.csv')
+data = pd.read_csv('CustomerBI\data\cleaned_customer_churn.csv')
 
 # Feature selection
 X = data[['feature1', 'feature2']]  # Replace with actual column names
@@ -18,5 +18,5 @@ model = RandomForestClassifier(random_state=42)
 model.fit(X_train, y_train)
 
 # Save the model
-joblib.dump(model, 'models/churn_model.pkl')
-print("Model trained and saved to 'models/churn_model.pkl'!")
+joblib.dump(model, 'CustomerBI\models\churn_model.pkl')
+print("Model trained and saved to 'CustomerBI\models\churn_model.pkl'!")
