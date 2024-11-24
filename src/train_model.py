@@ -7,7 +7,7 @@ import joblib
 data = pd.read_csv('CustomerBI\data\cleaned_customer_churn.csv')
 
 # Feature selection
-X = data[['feature1', 'feature2']]  # Replace with actual column names
+X = data[['Gender', 'Partner']]  # Replace with actual column names
 y = data['churn']
 
 # Train-test split
