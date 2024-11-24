@@ -11,7 +11,7 @@ data_encoded = pd.get_dummies(data, columns=['Gender', 'Partner'], drop_first=Tr
 
 # Feature selection (after encoding, selecting the columns)
 X = data_encoded[['Gender_Male', 'Partner_Yes']]  # After encoding column names
-y = data['Country']  # Target column remains the same
+y = data['City']  # Target column remains the same
 
 # Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
